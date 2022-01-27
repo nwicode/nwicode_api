@@ -9,4 +9,4 @@ Components and modules are of two types: system and visual.
 System modules placed in storage\components\modules\system path.
 Visual components (buttons, charts, lists etc) placed in storage\components\modules\visual
 
-More info and examples in [https://github.com/nwicode/nwicode_api/wiki#custom-modules-and-user-components](https://github.com/nwicode/nwicode_api/wiki#custom-modules-and-user-components)
+More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-modules-and-User-components](https://github.com/nwicode/nwicode_api/wiki/Custom-modules-and-User-components)
