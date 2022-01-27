@@ -1,0 +1,18 @@
+{
+    "name": "Menu",
+	"class": "DefaultMenu",
+    "code": "default_menu",
+    "type": "visual",
+    "position": "menu",
+    "category": "headers",
+    "description": "Default menu",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "free_to_distribute": true,
+    "run_command": [],
+    "dependencies": [],
+	"devDependencies": []
+ }

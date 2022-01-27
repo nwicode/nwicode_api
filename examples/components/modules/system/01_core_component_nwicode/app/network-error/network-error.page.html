@@ -1,0 +1,9 @@
+<ion-content [fullscreen]="true" class="ion-padding network-error-page">
+
+  <div id="container" class="ion-padding">
+    <strong *ngIf="loaded && has_translation">{{'NETWORK_ERROR' | translate}}</strong>
+    <strong *ngIf="loaded && !has_translation">Network error, try again later.</strong>
+    <ion-button [routerLink]="['/start']" *ngIf="loaded && has_translation" expand="block" color="warning">{{'NETWORK_ERROR_RETRY' | translate}}</ion-button>
+    <ion-button [routerLink]="['/start']" *ngIf="loaded && !has_translation" expand="block" color="warning">Retry</ion-button>
+  </div>
+</ion-content>

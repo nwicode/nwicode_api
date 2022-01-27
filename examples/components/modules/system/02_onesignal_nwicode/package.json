@@ -1,0 +1,22 @@
+{
+    "name": "OneSignal PUSH",
+	"class": "OneSignalInstall",
+    "code": "02_onesignal_nwicode",
+    "type": "system",
+    "category": "modules",
+    "description": "OneSignal PUSH module",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "free_to_distribute": true,
+    "run_command": [
+      "npm install @capacitor-community/firebase-crashlytics"  
+    ],
+    "dependencies": [
+      "\"@ionic-native/onesignal\": \"^5.31.1\"",
+      "\"onesignal-cordova-plugin\": \"^3.0.1\""
+    ],
+	"devDependencies": []
+ }

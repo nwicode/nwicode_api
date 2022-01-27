@@ -1,0 +1,19 @@
+{
+    "name": "Core Module",
+    "code": "01_core_component_nwicode",
+    "type": "system",
+    "category": "modules",
+    "description": "Core module. Could not be removed. Used for initial source build.",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "free_to_distribute": true,
+    "run_command": [
+      "npm install @ngx-translate/core @ngx-translate/http-loader",
+	  "npm install @capacitor-community/http"
+    ],
+    "dependencies": [],
+	"devDependencies": []	
+}
