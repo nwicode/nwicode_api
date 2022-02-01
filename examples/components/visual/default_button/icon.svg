@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="480"
+   height="720"
+   viewBox="0 0 127 190.50001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="icon.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3719">
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="0"
+         id="stop3715" />
+      <stop
+         id="stop3725"
+         offset="0.08058813"
+         style="stop-color:#f3f3f3;stop-opacity:1;" />
+      <stop
+         id="stop3723"
+         offset="0.90476203"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <stop
+         style="stop-color:#f2f2f2;stop-opacity:0;"
+         offset="1"
+         id="stop3717" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3719"
+       id="linearGradient3721"
+       x1="109.84773"
+       y1="45.198696"
+       x2="129.29164"
+       y2="45.131882"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(4.9876188,0,0,4.9876188,-528.78249,-28.604541)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="357.98816"
+     inkscape:cy="380.97998"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-106.49998)">
+    <g
+       id="g19"
+       transform="matrix(2.277778,0,0,2.277778,-83.180218,-250.83107)">
+      <rect
+         style="fill:#000000;fill-opacity:0.361868;stroke:none;stroke-width:0.269929;stroke-opacity:1"
+         id="rect54"
+         width="81.784462"
+         height="19.243393"
+         x="26.192411"
+         y="186.68085"
+         ry="1.2907153"
+         rx="1.2907153" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:24.1064px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.602661"
+       x="38.271519"
+       y="204.52104"
+       id="text23"><tspan
+         sodipodi:role="line"
+         id="tspan21"
+         x="38.271519"
+         y="204.52104"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.602661">BUTTON</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:38.5703px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.602661"
+       x="-0.38604522"
+       y="207.56499"
+       id="text27"><tspan
+         sodipodi:role="line"
+         id="tspan25"
+         x="-0.38604522"
+         y="207.56499"
+         style="font-size:38.5703px;stroke-width:0.602661">+</tspan></text>
+  </g>
+</svg>

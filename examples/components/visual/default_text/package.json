@@ -1,0 +1,18 @@
+{
+    "name": "Simple Text",
+	"class": "SimpleText",
+    "code": "default_text",
+    "type": "visual",
+    "position": "body",
+    "category": "texts",
+    "description": "text block",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "free_to_distribute": true,
+    "run_command": [],
+    "dependencies": [],
+	"devDependencies": []
+ }
