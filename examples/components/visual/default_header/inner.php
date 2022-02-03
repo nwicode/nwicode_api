@@ -183,7 +183,7 @@
 	}
 
 ?>
-<div id="page_HEADER_0315" class="component-selectable" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
+<div id="page_HEADER_0315" class="component-selectable <?php echo $component_data['component']['css_class']?>" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
     <ion-header <?php if ($no_border) echo 'class="ion-no-border"';?>>
 		<ion-toolbar style="text-align: <?php echo $text_align;?>; --background: <?php echo $background_color_value?>;">
 			<?php if ($use_left_button) {?>
