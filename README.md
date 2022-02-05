@@ -13,6 +13,9 @@ More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-mo
 
 
 # Updates
+- **Feb 5, 2022**
+Update examples
+
 - **Feb 3, 2022**
 Add "text_module" to examples
 
