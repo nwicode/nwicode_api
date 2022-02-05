@@ -183,7 +183,7 @@ if (isset($component_data['colors'])) {
 				<ion-button style="--border-radius: <?php echo $left_button_border_radius?>px;" fill="<?php echo $left_button_type?>" color="<?php echo $left_button_color_value?>" <?php if ($left_button_action!="-") echo '(click)="'.$left_button_action.'"'; ?>>
 				
 				<?php if ($left_button_icon!="" && $lbtext!="") {?> 
-					<ion-icon color="<?php echo $left_button_icon_color_value?>" slot="start" name="<?php echo $left_button_icon; ?>"></ion-icon><ion-text color="<?php echo $left_button_text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_HEADER_LB_TITLE')}}</ion-text>
+					<ion-icon color="<?php echo $left_button_icon_color_value?>" slot="start" name="<?php echo $left_button_icon; ?>"></ion-icon><ion-text color="<?php echo $left_button_text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_<?php echo $component_data['page_component_id']?>_HEADER_LB_TITLE')}}</ion-text>
 				<?php }else if ($left_button_icon!="" && $lbtext=="") {?> 
 					<ion-icon color="<?php echo $left_button_icon_color_value?>" slot="icon-only" name="<?php echo $left_button_icon; ?>"></ion-icon>
 				<?php }else if ($left_button_icon=="" && $lbtext=="") {?> 
@@ -195,14 +195,14 @@ if (isset($component_data['colors'])) {
 
 			</ion-buttons>			
 			<?php }?>
-			<ion-title><ion-text style="font-size: <?php echo $font_size;?>px;" color="<?php echo $text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_HEADER_TITLE')}}</ion-text></ion-title>
+			<ion-title><ion-text style="font-size: <?php echo $font_size;?>px;" color="<?php echo $text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_<?php echo $component_data['page_component_id']?>_HEADER_TITLE')}}</ion-text></ion-title>
 		
 			<?php if ($use_right_button) {?>
 				<ion-buttons slot="end">
 				<ion-button  style="--border-radius: <?php echo $right_button_border_radius?>px;" fill="<?php echo $right_button_type?>" color="<?php echo $right_button_color_value?>" <?php if ($right_button_action!="-") echo '(click)="'.$right_button_action.'"'; ?>>
 				
 				<?php if ($right_button_icon!="" && $rbtext!="") {?> 
-					<ion-icon color="<?php echo $right_button_icon_color_value?>" slot="end" name="<?php echo $right_button_icon; ?>"></ion-icon><ion-text color="<?php echo $right_button_text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_HEADER_RB_TITLE')}}</ion-text>
+					<ion-icon color="<?php echo $right_button_icon_color_value?>" slot="end" name="<?php echo $right_button_icon; ?>"></ion-icon><ion-text color="<?php echo $right_button_text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_<?php echo $component_data['page_component_id']?>_HEADER_RB_TITLE')}}</ion-text>
 				<?php }else if ($right_button_icon!="" && $rbtext=="") {?> 
 					<ion-icon color="<?php echo $right_button_icon_color_value?>" slot="icon-only" name="<?php echo $right_button_icon; ?>"></ion-icon>
 				<?php }else if ($right_button_icon=="" && $rbtext=="") {?> 

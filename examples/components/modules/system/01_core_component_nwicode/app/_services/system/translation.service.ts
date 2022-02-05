@@ -3,6 +3,7 @@ import {TranslateService} from '@ngx-translate/core';
 import { environment } from 'src/environments/environment';
 import {SystemSettingsService} from "./system-settings.service";
 import { NavController } from '@ionic/angular';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class TranslationService {
 
   public showLanguagesList:boolean = false;
 
-  constructor(private nav: NavController, private systemSettingsService:SystemSettingsService, private translate: TranslateService) { }
+  constructor(private nav: NavController, private systemSettingsService:SystemSettingsService, private translate: TranslateService, private sanitizer:DomSanitizer) { }
 
 
   /**
@@ -96,4 +97,15 @@ export class TranslationService {
     this.nav.navigateRoot("/"); 
   }
 
+
+    /**
+   * Translate key to current language with HTML tags
+   * @param key key
+   * @param params additional params with variables
+   * @returns string
+   */
+     public translatePhraseHTML(key:string, params = []) {
+      let s = this.translate.instant(key);
+      return this.sanitizer.bypassSecurityTrustHtml(s);
+    }
 }

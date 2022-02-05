@@ -10,3 +10,20 @@ System modules placed in storage\components\modules\system path.
 Visual components (buttons, charts, lists etc) placed in storage\components\modules\visual
 
 More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-modules-and-User-components](https://github.com/nwicode/nwicode_api/wiki/Custom-modules-and-User-components)
+
+
+# Updates
+- **Feb 3, 2022**
+Add "text_module" to examples
+
+- **Feb 1, 2022**
+Update examples
+
+- **Jan 27, 2022**
+Update manuals, add examples
+
+- **Jan 17, 2022**
+Add screenshots, add Components section
+
+- **Jan 16, 2022**
+First upload

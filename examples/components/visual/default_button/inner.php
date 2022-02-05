@@ -6,6 +6,7 @@
 	use App\Models\Application;
 	use App\Models\Application_Languages;
 
+
 	//left button
 	$font_size = 15;
 	$left_button_text = "Click";
@@ -82,7 +83,7 @@
 ?>
 <div 
 style="left: <?php echo $component_data['component']['x0']?>px; top: <?php echo $component_data['component']['y0']?>px; height: <?php echo $component_data['component']['height']?>px; width: <?php echo $component_data['component']['width']?>px; " 
-id="page_button_<?php echo $component_data['page_component_id']?>" class="component-resizeble component-draggable component_inner_wrapper" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
+id="page_button_<?php echo $component_data['page_component_id']?>" class="component-resizeble component-draggable component_inner_wrapper <?php echo $component_data['component']['css_class']?>" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
 	<ion-button expand​="block" style="width: 100%; margin:0px;  --background: <?php echo $left_button_color_value?>; --border-radius: <?php echo $left_button_border_radius?>px;" fill="solid">
 
 	<?php if ($left_button_icon!="" && $lbtext!="") {?> 

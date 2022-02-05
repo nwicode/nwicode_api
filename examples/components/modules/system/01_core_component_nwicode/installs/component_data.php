@@ -37,8 +37,6 @@ $component_data['app.routing-module.ts'] = [
 	"{ path: 'network-error', loadChildren: () => import('./network-error/network-error.module').then( m => m.NetworkErrorPageModule)}",
 	"{ path: 'application-blocked', loadChildren: () => import('./application-blocked/application-blocked.module').then( m => m.ApplicationBlockedPageModule)}",
 	"{ path: 'start', loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)}",
-    "{ path: 'login', loadChildren: () => import('./login/login.module').then( m => m.LoginModule)}",
-    "{ path: 'register', loadChildren: () => import('./register/register.module').then( m => m.RegisterModule)}",
 	"{path: '', redirectTo: 'start', pathMatch: 'full'}",
 ];
 
