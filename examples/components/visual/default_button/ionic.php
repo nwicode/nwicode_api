@@ -80,7 +80,7 @@
 
 
 //set button actions variable
-if (isset($component_data['actions']) && isset($component_data['left_button_action'])))  {
+if (isset($component_data['actions']) && isset($component_data['left_button_action']))  {
 	foreach ($component_data['actions'] as $action) {
 		if ($action['code']==$component_data['left_button_action']) $left_button_action=$action['angular'];
 	}

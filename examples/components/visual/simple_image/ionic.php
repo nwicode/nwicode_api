@@ -19,7 +19,7 @@
 	$remote_url = "";
 	if (isset($component_data['remote_url'])) $remote_url = $component_data['remote_url'];
 	
-	$use_url = $local_url_full; if ($remote_url!="") $use_url = $remote_url;
+	$use_url = "./assets/resources/".$local_url; if ($remote_url!="") $use_url = $remote_url;
 	
 	//set button actions variable
 	if (isset($component_data['actions']) && isset($component_data['click_action']))  {
