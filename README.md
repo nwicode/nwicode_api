@@ -13,6 +13,9 @@ More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-mo
 
 
 # Updates
+- **Feb 7, 2022**
+Add mised click event to button, add image component
+
 - **Feb 5, 2022**
 Update examples
 

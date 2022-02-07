@@ -79,9 +79,16 @@
 	}
 
 
+//set button actions variable
+if (isset($component_data['actions']) && isset($component_data['left_button_action'])))  {
+	foreach ($component_data['actions'] as $action) {
+		if ($action['code']==$component_data['left_button_action']) $left_button_action=$action['angular'];
+	}
+}
+
 ?>
 <div id="page_button_<?php echo $component_data['page_component_id']?>" class="component-resizeble component-draggable component_inner_wrapper <?php echo $component_data['component']['css_class']?>" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
-	<ion-button color="<?php echo $left_button_color_value?>" expand="block" style="width: 100%; margin:0px;  --border-radius: <?php echo $left_button_border_radius?>px;" fill="solid">
+	<ion-button color="<?php echo $left_button_color_value?>" expand="block" style="width: 100%; margin:0px;  --border-radius: <?php echo $left_button_border_radius?>px;" fill="solid" <?php if ($left_button_action!="-") echo '(click)="'.$left_button_action.'"'; ?>>
 
 	<?php if ($left_button_icon!="" && $lbtext!="") {?> 
 	<ion-icon color="<?php echo $left_button_icon_color_value?>" slot="start" name="<?php echo $left_button_icon; ?>"></ion-icon><ion-text color="<?php echo $left_button_text_color_value?>">{{translationService.translatePhrase('PAGE_<?php echo $component_data['page_id']?>_<?php echo $component_data['page_component_id']?>_FOOTER_LB_TITLE')}}</ion-text>
