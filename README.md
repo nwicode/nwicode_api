@@ -13,6 +13,9 @@ More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-mo
 
 
 # Updates
+- **Mar 8, 2022**
+Add preview mode documentation, add form tabs documentation, add list module example
+
 - **Feb 7, 2022**
 Add mised click event to button, add image component
 

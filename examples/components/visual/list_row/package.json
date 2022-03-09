@@ -1,0 +1,19 @@
+{
+    "name": "Row list",
+    "class": "SimpleList",
+    "code": "list_row",
+    "type": "visual",
+    "position": "body",
+    "category": "database",
+    "description": "Simple list for content type",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "free_to_distribute": true,
+	"card_design": true,
+    "run_command": [],
+    "dependencies": [],
+	"devDependencies": []
+ }
