@@ -100,10 +100,10 @@
 		box-shadow: <?php echo $component_data['component']['card_shadow'];?>;">
 <?php }?>
 
-<ion-list lines="<?php echo $divider_type?>">
+<ion-list lines="<?php echo $divider_type?>" style="background: transparent;">
           
 	<?php for($i=1; $i<=$rows_count; $i++) {?>
-          <ion-item style="--border-color: <?php echo $divider_color_value?>">
+          <ion-item style="--background: transparent;  --border-color: <?php echo $divider_color_value?>">
 			<?php if ($image_column_name!="-") {?>
 				<?php if ($image_type=="thumbnail") {?>
 				<ion-thumbnail slot="start">

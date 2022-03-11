@@ -13,6 +13,9 @@ More info and examples in [https://github.com/nwicode/nwicode_api/wiki/Custom-mo
 
 
 # Updates
+- **Mar 11, 2022**
+Add FAB component and TAB FOOTER component
+
 - **Mar 8, 2022**
 Add preview mode documentation, add form tabs documentation, add list module example
 

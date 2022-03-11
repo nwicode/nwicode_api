@@ -1,0 +1,17 @@
+#page_footer_tabs_0315  ion-button {
+
+        padding: 0px !important;
+        margin: 0px !important;    
+}
+#page_footer_tabs_0315  ion-button div {
+    display: block;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 11px;
+    text-transform: none;
+}
+
+#page_footer_tabs_0315  ion-button div ion-icon {
+    width:20px;
+    height: 20px;
+}

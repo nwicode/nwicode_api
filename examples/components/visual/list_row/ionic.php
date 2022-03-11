@@ -139,10 +139,10 @@
 <?php }?>
 
 
-<ion-list lines="<?php echo $divider_type?>">
+<ion-list lines="<?php echo $divider_type?>" style="background: transparent;">
           
           <div *ngFor="let item of simple_list_<?php echo $component_data['page_component_id']?>">
-		  <ion-item <?php if ($visibility_column_name!="-") {?>*ngIf="item.<?php echo $visibility_column_name?>"<?php }?> style="--border-color: <?php echo $divider_color_value?>" (click)="contentService.setCurrentContent('content_type_<?php echo $content_type?>',item); <?php if ($button_action!="-") echo $button_action.';'; ?>" <?php if ($button_action!="-") echo 'button'; ?>>
+		  <ion-item <?php if ($visibility_column_name!="-") {?>*ngIf="item.<?php echo $visibility_column_name?>"<?php }?> style="--background: transparent;  --border-color: <?php echo $divider_color_value?>" (click)="contentService.setCurrentContent('content_type_<?php echo $content_type?>',item); <?php if ($button_action!="-") echo $button_action.';'; ?>" <?php if ($button_action!="-") echo 'button'; ?>>
 			<?php if ($image_column_name!="-") {?>
 				<?php if ($image_type=="thumbnail") {?>
 				<ion-thumbnail slot="start">

@@ -1,0 +1,19 @@
+{
+    "name": "FAB button",
+	"class": "FabButton",
+    "code": "fab_button",
+    "type": "visual",
+    "position": "body",
+    "category": "simple",
+    "description": "Floating action button",
+    "author": "NWICODE Team",
+    "email": "support@nwicode.com",
+    "version": "1.0.0",
+    "release": "11.12.2021",
+    "component": false,
+    "static": true,
+    "free_to_distribute": true,
+    "run_command": [],
+    "dependencies": [],
+	"devDependencies": []
+ }
