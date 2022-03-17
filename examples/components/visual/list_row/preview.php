@@ -125,45 +125,8 @@
     $counter = 0;
     if ($component_data['rows_count'] > 0) $counter = $component_data['rows_count'];
 
-    //get content
-    $list = [];
-    $applicationContent = new ApplicationContent();
-    $applicationContent->setApplication($component_data['application']);    
-    $list_content = $applicationContent->getContent($component_data['content_type'],$language,"",$sort_field, $sort_direction,$counter,0);
+	$www_resources = '/storage/application/' .$component_data['application']->id . '-'. $component_data['application']->unique_string_id .'/resources/';
 
-    //prepare list
-    
-    foreach($list_content as $item) {
-        $list[] = [
-            "title" => isset($item[$component_data['title_column_name']])?$item[$component_data['title_column_name']]:'',
-            "subtitle" => isset($item[$component_data['subtitle_column_name']])?$item[$component_data['subtitle_column_name']]:'',
-            "preview" => isset($item[$component_data['preview_column_name']])?$item[$component_data['preview_column_name']]:'',
-            "image" => isset($item[$component_data['image_column_name']])?$item[$component_data['image_column_name']]:'',
-            "note" => isset($item[$component_data['note_column_name']])?$item[$component_data['note_column_name']]:'',
-            "visibility_condition" => isset($item[$component_data['visibility_column_name']])?$item[$component_data['visibility_column_name']]:'',
-        ];
-
-    }
-    //make list
-    /*[title_column_name] => column_title
-    [subtitle_column_name] => -
-    [preview_column_name] => column_string1
-    [image_column_name] => column_image1
-    [note_column_name] => -
-    [visibility_column_name] => column_logical1
-    [rows_count] => 20
-    [image_type] => thumbnail
-    [sort_column_name] => -
-    [sort_direction] => ASC
-    [divider_type] => inset
-    [divider_color] => --ion-color-light
-    [divider_color_value] => #5260ff
-    [title_wrap] => wrap
-    [title_bold] => no
-    [title_font_size] => 16
-    [title_color] => --ion-color-dar    */
-    //print_r($component_data);
-	
 ?>
 <div id="list_row_<?php echo $component_data['page_component_id']?>" class="<?php echo $component_data['component']['css_class']?>" <?php if (isset($component_data['page_component_id'])) {?>component-id="<?php echo $component_data['page_component_id']?>"<?php } ?>>
 
@@ -185,39 +148,39 @@
 
 <ion-list lines="<?php echo $divider_type?>" style="background: transparent;">
         
-        <?php foreach($list as $item) {?> 
-          <div>
+
+          <div ng-repeat="item in content_list_<?php echo $component_data['page_component_id']?>">
          
-		  <ion-item style="--background: transparent; --border-color: <?php echo $divider_color_value?>" (click)="contentService.setCurrentContent('content_type_<?php echo $content_type?>',''); <?php if ($button_action!="-") echo $button_action.';'; ?>" <?php if ($button_action!="-") echo 'button'; ?>>
+		  <ion-item style="--background: transparent; --border-color: <?php echo $divider_color_value?>" (click)="contentService.setCurrentContent('content_type_<?php echo $content_type?>',item); <?php if ($button_action!="-") echo $button_action.';'; ?>" <?php if ($button_action!="-") echo 'button'; ?>>
 			<?php if ($image_column_name!="-") {?>
 				<?php if ($image_type=="thumbnail") {?>
 				<ion-thumbnail slot="start">
-				  <img src="<?php echo $item['image']?>" />
+				  <img src="<?php echo $www_resources?>{{item.<?php echo $image_column_name?>_original}}" />
 				</ion-thumbnail>
 				<?php } else {?>
 				<ion-avatar slot="start">
-				  <img src="<?php echo $item['image']?>" />
+				  <img src="<?php echo $www_resources?>{{item.<?php echo $image_column_name?>_original}}" />
 				</ion-avatar>			
 				<?php } ?>
 			<?php } ?>
 			<?php if ($note_column_name!="-") {?>
-				<ion-note slot="end" <?php if ($note_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($note_bold=="yes") echo "font-weight: bold;";?>  font-size:<?php echo $note_font_size?>px; color: var(<?php echo $note_color?>);" ><?php echo $item['note']?></ion-note>
+				<ion-note slot="end" <?php if ($note_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($note_bold=="yes") echo "font-weight: bold;";?>  font-size:<?php echo $note_font_size?>px; color: var(<?php echo $note_color?>);" ng-bind-html="item.<?php echo $note_column_name?>" | to_trusted></ion-note>
 			<?php } ?>			
             <ion-label>
 				<?php if ($title_column_name!="-") {?>
-					<h2 <?php if ($title_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($title_bold=="yes") echo "font-weight: bold;";?> font-size:<?php echo $title_font_size?>px; color: var(<?php echo $title_color?>);"><?php echo $item['title']?></h2>
+					<h2 <?php if ($title_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($title_bold=="yes") echo "font-weight: bold;";?> font-size:<?php echo $title_font_size?>px; color: var(<?php echo $title_color?>);" ng-bind-html="item.<?php echo $title_column_name?> | to_trusted"></h2>
 				<?php } ?>
 				<?php if ($subtitle_column_name!="-") {?>
-					<h3 <?php if ($subtitle_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($subtitle_bold=="yes") echo "font-weight: bold;";?> font-size:<?php echo $subtitle_font_size?>px; color: var(<?php echo $subtitle_color?>);"><?php echo $item['subtitle']?></h3>
+					<h3 <?php if ($subtitle_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($subtitle_bold=="yes") echo "font-weight: bold;";?> font-size:<?php echo $subtitle_font_size?>px; color: var(<?php echo $subtitle_color?>);"  ng-bind-html="item.<?php echo $subtitle_column_name?> | to_trusted"></h3>
 				<?php } ?>
 				<?php if ($preview_column_name!="-") {?>
-					<p <?php if ($preview_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($preview_bold=="yes") echo "font-weight: bold;";?>  font-size:<?php echo $preview_font_size?>px; color: var(<?php echo $preview_color?>);"><?php echo $item['preview']?></p>
+					<p <?php if ($preview_wrap=="wrap") echo "class='ion-text-wrap'";?> style="<?php if ($preview_bold=="yes") echo "font-weight: bold;";?>  font-size:<?php echo $preview_font_size?>px; color: var(<?php echo $preview_color?>);"  ng-bind-html="item.<?php echo $preview_column_name?> | to_trusted"></p>
 				<?php } ?>
             </ion-label>
           </ion-item>
           
 		 </div>
-         <?php } ?>
+
 </ion-list>		
 <?php if ($component_data['component']['use_card']==1) { ?>
 </ion-card>

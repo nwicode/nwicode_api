@@ -12,15 +12,8 @@
     "free_to_distribute": true,
     "run_command": [
       "npm install @ngx-translate/core @ngx-translate/http-loader",
-	  "npm install @capacitor-community/http",
-
-      "npm install @ionic-native/music-controls",
-      "npm install @ionic-native/background-mode",
-      "npm install howler",
-      "npm install @ionic-native/core",
-
-      "npm i youtube-player"
+	  "npm install @capacitor-community/http"
     ],
     "dependencies": [],
-	"devDependencies": []
+	  "devDependencies": []	
 }

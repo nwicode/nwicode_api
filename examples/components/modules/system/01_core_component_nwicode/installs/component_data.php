@@ -46,10 +46,10 @@ $component_data['*.routing-module.ts'] = [];
 
 //wil be added to all pages
 $component_data['*.module.ts'] = [
-	"import" => ["import { CommonComponent} from '../CommonComponent';"],
+	"import" => ["import { CommonComponent} from '../CommonComponent'","import { ReactiveFormsModule } from '@angular/forms'"],
 	"declarations" => "",
 	"entryComponents" => "",
-	"imports" => ["CommonComponent"],
+	"imports" => ["CommonComponent","ReactiveFormsModule"],
 	"providers" => "",
 	"bootstrap" => "",
 ];

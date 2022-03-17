@@ -24,13 +24,14 @@ export class RequestWrapperService {
   }
 
 
-  public post(route:string, data:any):Observable<any> {
+  public post(route:string, data:any = {}):Observable<any> {
     let new_data = data;
     new_data.sb = environment.appId;
     let httpOptions: HttpOptions = {
       url: environment.api + route,
       method: 'POST',
       data: new_data,
+      responseType: "json",
       headers: { 'Content-Type': 'application/json' }
     };
     return from(Http.request(httpOptions));    

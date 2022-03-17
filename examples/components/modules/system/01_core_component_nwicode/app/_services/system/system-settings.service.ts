@@ -61,4 +61,24 @@ export class SystemSettingsService {
     let data = JSON.parse(localStorage.getItem("app_"+environment.appId+"_settings"));
     return data.settings.menu;
   }
+  
+  
+
+  /**
+   * Get application name
+   * @returns app name from settings
+   */
+  public getAppName() {
+    let data = JSON.parse(localStorage.getItem("app_"+environment.appId+"_settings"));
+    return data.settings.name;
+  }
+
+  /**
+   * Get application version
+   * @returns app version from settings
+   */
+  public getAppVersion() {
+    let data = JSON.parse(localStorage.getItem("app_"+environment.appId+"_settings"));
+    return data.settings.version;
+  }  
 }

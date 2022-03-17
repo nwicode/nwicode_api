@@ -20,16 +20,19 @@ foreach($pages as $page) {
     $actions[] = [
         "code" =>"gotopageforward.page".$page->id,
         "angular" =>"navigateService.topageforward('page".$page->id."')",
+        "preview" =>"navigateService.topageforward('page".$page->id."')",
         "description"=>"Go to Page ".$page->name ." (forward)"
     ];
     $actions[] = [
         "code" =>"gotopageback.page".$page->id,
         "angular" =>"navigateService.topageback('page".$page->id."')",
+        "preview" =>"navigateService.topageback('page".$page->id."')",
         "description"=>"Go to Page ".$page->name ." (back)"
     ];
     $actions[] = [
         "code" =>"gotopage.page".$page->id,
         "angular" =>"navigateService.topage('page".$page->id."')",
+        "preview" =>"navigateService.topage('page".$page->id."')",	
         "description"=>"Go to Page ".$page->name ." (and set as ROOT)"
     ];
 }

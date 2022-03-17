@@ -6,7 +6,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { ReplacePipe } from './_services/pipes/replace.pipe';
 
 @NgModule({
   imports: [
@@ -14,8 +13,8 @@ import { ReplacePipe } from './_services/pipes/replace.pipe';
     RouterModule,
     TranslateModule
   ],
-  declarations: [ReplacePipe],
-  exports: [TranslateModule,ReplacePipe],
+  declarations: [],
+  exports: [TranslateModule],
   providers: []
 })
 export class CommonComponent {

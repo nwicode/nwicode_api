@@ -98,14 +98,24 @@ export class TranslationService {
   }
 
 
+
     /**
    * Translate key to current language with HTML tags
    * @param key key
    * @param params additional params with variables
    * @returns string
    */
-     public translatePhraseHTML(key:string, params = []) {
+     public translatePhraseHTML(key:string, params:any) {
       let s = this.translate.instant(key);
+
+      for (var key in params) {
+        if (!params.hasOwnProperty(key)) {
+            continue;
+        }
+      
+          s = s.replace(key, params[key]);
+      }
+
       return this.sanitizer.bypassSecurityTrustHtml(s);
     }
 }
